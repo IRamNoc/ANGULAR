@@ -1,0 +1,17 @@
+<section>
+  <h1>Connexion</h1>
+  <form (submit)="login()">
+    <fieldset>
+      <label>ID</label>
+      <input  [(ngModel)]="auth.authID.id" name="email">
+    </fieldset>
+
+    <fieldset>
+      <label >Mot de passe</label>
+      <input [(ngModel)]="auth.authID.mdp" type="password" name="password" >
+    </fieldset>
+
+    <button type="submit">Connexion</button>
+
+  </form>
+</section>
