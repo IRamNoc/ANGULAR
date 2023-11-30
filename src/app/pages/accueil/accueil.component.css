@@ -1,0 +1,48 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Couleur de fond de la page */
+  }
+  
+  header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333; /* Couleur de fond de l'en-tête */
+    color: #fff; /* Couleur du texte dans l'en-tête */
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  header h2 {
+    font-size: 1.5em;
+  }
+  
+  section {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff; /* Couleur de fond de la section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  
+  /* Style pour les moustaches */
+  section span {
+    font-weight: bold;
+    color: #333; /* Couleur du texte pour les moustaches */
+  }
+  
+  /* Style pour la liste de moustaches */
+  section ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  section li {
+    margin-bottom: 10px;
+  }
+  

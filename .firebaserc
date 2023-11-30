@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angularapp-842b4": {
+      "hosting": {
+        "CY2023-feast": [
+          "angularapp-842b4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angularapp-842b4"
+  }
+}

@@ -13,7 +13,7 @@ export class ContactComponent {
     age : 0,
     adresse : {
       rue : '',
-      codePostal : 0,
+      codePostal :0,
       ville : ''
     },
     tel : '',

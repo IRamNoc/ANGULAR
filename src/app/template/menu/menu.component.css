@@ -1,0 +1,47 @@
+nav {
+    background-color: #333;
+    padding: 15px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  
+  li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  li a:hover {
+    color: #ff9900; /* Couleur de survol */
+  }
+  
+/* Style pour les liens du menu lorsqu'ils sont sélectionnés ou actifs */
+li.active a {
+    color: #fff; /* Couleur du texte en blanc */
+    background-color: #555; /* Couleur de fond pour l'élément actif */
+    padding: 8px 15px; /* Ajuste le padding pour une meilleure visibilité */
+    border-radius: 5px; /* Ajoute des coins arrondis pour un look moderne */
+  }
+  
+  
+  /* Style pour le bouton de déconnexion */
+  li.logout {
+    cursor: pointer;
+  }
+  
+  li.logout:hover {
+    color: #ff0000; /* Couleur de survol pour la déconnexion */
+  }
+  

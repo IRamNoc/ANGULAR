@@ -27,6 +27,11 @@ import { EvenementComponent } from './pages/evenement/evenement.component';
 //Interceptors
 import { TokenInterceptor } from './shared/securite/token.interceptor';
 import { Auth401Interceptor } from './shared/securite/auth401.interceptor';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -50,6 +55,11 @@ import { Auth401Interceptor } from './shared/securite/auth401.interceptor';
     SharedModule,
     BrowserModule,
     AppRoutingModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"angularapp-842b4","appId":"1:628313134530:web:e8c468825d321d7b57b25b","storageBucket":"angularapp-842b4.appspot.com","apiKey":"AIzaSyBngLTbivmXfnIul3SCUTlMkmksEcBZlHQ","authDomain":"angularapp-842b4.firebaseapp.com","messagingSenderId":"628313134530","measurementId":"G-7NYZE836ZJ"})),
+    provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
+    provideDatabase(() => getDatabase()),
+    provideStorage(() => getStorage()),
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass : TokenInterceptor, multi: true},

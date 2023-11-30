@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #333; /* Couleur de fond de l'en-tête */
+    color: #fff; /* Couleur du texte dans l'en-tête */
+  }
+  
+  tbody tr:hover {
+    background-color: #f5f5f5; /* Couleur de fond au survol */
+  }
+  
+  span.user {
+    background-color: #5bc0de; /* Couleur de fond pour le statut 'user' */
+    color: #fff; /* Couleur du texte pour le statut 'user' */
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  

@@ -1,0 +1,35 @@
+section {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff; /* Couleur de fond de la section */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  }
+  
+  h1 {
+    color: #333; /* Couleur du titre */
+  }
+  
+  .profil-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  fieldset {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  div {
+    padding: 10px;
+    width: 300px;
+    box-sizing: border-box;
+    background-color: #f2f2f2; /* Couleur de fond des champs */
+    border-radius: 5px;
+  }
+  

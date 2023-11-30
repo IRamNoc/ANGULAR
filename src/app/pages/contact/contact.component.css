@@ -1,14 +1,49 @@
-button {
-  padding: 10px 15px;
-  background-color: #e9e9e9;
-  border: none;
-  transition: background-color .3s ease;
-  align-self: fixed-end;
-  width: fix-content;
-  margin: 10px;
+section {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: #fff; /* Couleur de fond de la section */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
 }
 
-button:hover{
-  background-color: green;
-  color: white;
+h1, h2 {
+  color: #333; /* Couleur du titre */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  color: #333; /* Couleur du texte du label */
+}
+
+input {
+  padding: 10px;
+  width: 300px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+span {
+  color: #d9534f; /* Couleur du texte pour les messages d'erreur */
+  font-size: 12px;
+}
+
+button {
+  background-color: #5bc0de; /* Couleur de fond du bouton */
+  color: #fff; /* Couleur du texte dans le bouton */
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #31b0d5; /* Couleur de fond au survol du bouton */
 }

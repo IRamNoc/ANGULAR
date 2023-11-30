@@ -6,6 +6,8 @@ export interface UsersI {
   token ?: string;
   statut : string;
   infos ?: string;
+  dateCreation ?:number;
+  
 }
 
 export interface ContactI {
@@ -18,6 +20,7 @@ export interface ContactI {
   email : string;
   status ?: string;
   infos ?: string;
+  
 }
 
 interface Adresse {

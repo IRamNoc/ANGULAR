@@ -13,7 +13,6 @@ export class ConnexionComponent {
 
   constructor ( public auth : AuthService) {}
 
-
   login() {
     this.auth.authentification();
   }
