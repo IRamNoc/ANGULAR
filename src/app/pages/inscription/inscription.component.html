@@ -16,16 +16,21 @@
 
   </form>
   
-  <form (submit)="user.gereInscr(ctlf.value)" *ngIf="auth.isLoggedIn" #ctlf="ngForm">
+  <form (submit)="complete(ctlf.value)" *ngIf="auth.isLoggedIn" #ctlf="ngForm">
     <h1>Compléte ton profil</h1>
     <fieldset>
       <label>Nom    </label>
-      <input name="nom" ngModel required>
+      <input name="nom" [ngModel]="auth.profil.nom" required>
     </fieldset>
 
     <fieldset>
       <label>Prénom    </label>
-      <input name="prenom" ngModel required>
+      <input name="prenom" [ngModel]="auth.profil.prenom" required>
+    </fieldset>
+
+    <fieldset>
+      <label>Tel    </label>
+      <input name="prenom" [ngModel]="auth.profil.tel">
     </fieldset>
 
     <input hidden name="statut" [ngModel]="auth.profil!.statut ? auth.profil.statut : 'user' ">

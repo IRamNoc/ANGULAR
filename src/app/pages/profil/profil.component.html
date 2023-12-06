@@ -1,6 +1,7 @@
 <h1>Salut {{user.nom }} {{user.prenom}}</h1>
 <p>Email : {{user.email}}</p>
+<p>Statut du compte : {{user.statut}}</p>
 
-<img [src]="user.media?.src" [alt]="user.media?.alt" >
+<img [src]="user.media.src" [alt]="user.media.alt" *ngIf="user.media && user.media.src!=null" >
 
 <button (click)="userServie.deleteDoc(authService.user.uid)">Supprimer mon compte</button>

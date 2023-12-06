@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from 'src/app/shared/services/auth.service';
 import { UsersService } from 'src/app/shared/services/users.service';
 
@@ -18,10 +20,15 @@ export class InscriptionComponent {
   mdp : string = '';
 
 
-  constructor(public auth:AuthService, public user:UsersService) { }
+  constructor(public auth:AuthService, public user:UsersService, private red:Router) { }
 
   inscr() {
     this.auth.fireNewUser();
   }
 
+  complete(profile : NgForm) {
+    console.log(profile);
+    this.user.gereInscr(profile);
+    this.red.navigate(["/profil"]);
+  }
 }

@@ -7,6 +7,7 @@ export interface UsersI {
   statut : string;
   infos ?: string;
   media ?: MediaI;
+  tel ?: string;
 }
 
 export interface ContactI {

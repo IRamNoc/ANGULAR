@@ -59,8 +59,9 @@ export class AuthService {
       infos => {
         this.user = infos.user;
         this.isLoggedIn = true;
-        console.log('user : ', this.user);
-        this.getProfil();
+        this.profil = {
+          nom :'', prenom:'', email:this.authID.id, statut:''
+        }
         this.router.navigateByUrl('/inscription');
       }
     ).catch(
