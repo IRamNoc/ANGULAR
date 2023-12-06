@@ -1,49 +1,51 @@
-section {
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-  background-color: #fff; /* Couleur de fond de la section */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-}
-
-h1, h2 {
-  color: #333; /* Couleur du titre */
+.contact-section {
+  max-width: 600px; /* Largeur maximale pour la mise en page */
+  margin: 2em auto; /* Centrer horizontalement avec un espace au-dessus et en dessous */
 }
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 label {
-  display: block;
-  margin-top: 10px;
-  color: #333; /* Couleur du texte du label */
+  margin-bottom: 0.5em;
 }
 
-input {
-  padding: 10px;
-  width: 300px;
-  box-sizing: border-box;
-  margin-bottom: 10px;
+input,
+textarea {
+  padding: 0.5em;
+  margin-bottom: 1em;
 }
 
 span {
-  color: #d9534f; /* Couleur du texte pour les messages d'erreur */
-  font-size: 12px;
+  color: red; /* Couleur rouge pour les messages d'erreur */
 }
 
 button {
-  background-color: #5bc0de; /* Couleur de fond du bouton */
-  color: #fff; /* Couleur du texte dans le bouton */
-  padding: 12px 20px;
-  border: none;
-  border-radius: 5px;
+  background-color: #4CAF50; /* Couleur verte pour le bouton d'envoi */
+  color: white;
+  padding: 0.5em;
   cursor: pointer;
-  margin-top: 10px;
+  border: none;
+}
+
+button:disabled {
+  background-color: #aaa; /* Couleur grise pour le bouton désactivé */
+  cursor: not-allowed;
 }
 
 button:hover {
-  background-color: #31b0d5; /* Couleur de fond au survol du bouton */
+  background-color: #45a049; /* Couleur légèrement plus foncée au survol */
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 2em auto;
+  margin-bottom: 60px; /* Ajoutez une marge équivalente à la hauteur du footer */
+}
+
+/* Ou utilisez un espace vide en bas de la page */
+.contact-space {
+  height: 60px; /* Hauteur équivalente à la hauteur du footer */
 }

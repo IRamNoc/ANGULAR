@@ -1,18 +1,38 @@
 <section>
-  <h1>Inscription</h1>
   
-    <form (submit)="singup()">
+  <form (submit)="inscr()" *ngIf="!auth.isLoggedIn">
+    <h1>Inscription</h1>
       <fieldset>
-        <label>id</label>
+        <label>Identifiant/Email   </label>
         <input  [(ngModel)]="auth.authID.id" name="email">
       </fieldset>
   
       <fieldset>
-        <label >Mot de passe</label>
+        <label >Mot de passe    </label>
         <input [(ngModel)]="auth.authID.mdp" type="password" name="password" >
       </fieldset>
 
     <button type="submit">S'inscrire</button>
 
   </form>
+  
+  <form (submit)="user.gereInscr(ctlf.value)" *ngIf="auth.isLoggedIn" #ctlf="ngForm">
+    <h1>Compléte ton profil</h1>
+    <fieldset>
+      <label>Nom    </label>
+      <input name="nom" ngModel required>
+    </fieldset>
+
+    <fieldset>
+      <label>Prénom    </label>
+      <input name="prenom" ngModel required>
+    </fieldset>
+
+    <input hidden name="statut" [ngModel]="auth.profil!.statut ? auth.profil.statut : 'user' ">
+    <input hidden name="email" [ngModel]="auth.user.email">
+
+    <button type="submit" [disabled]="!ctlf.valid">J'ai terminé</button>
+  </form>
+
+  <a routerLink="/connexion" *ngIf="!auth.isLoggedIn">Déjà un compte ? Se connecter</a>
 </section>

@@ -1,0 +1,21 @@
+/* Ajoutez vos styles spécifiques ici */
+
+section {
+    margin: 20px; /* Ajoutez des marges pour aérer la section */
+  }
+  
+  aside {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  div {
+    flex: 1;
+    margin-right: 20px; /* Ajoutez une marge à droite pour l'espace entre le texte et l'image */
+  }
+  
+  button {
+    margin-top: 10px; /* Ajoutez une marge en haut des boutons pour l'espace visuel */
+  }
+  

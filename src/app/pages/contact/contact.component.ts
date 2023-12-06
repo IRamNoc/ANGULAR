@@ -7,23 +7,23 @@ import { ContactI } from 'src/app/shared/models/users-i';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
-  contact : ContactI = {
-    nom : '',
-    prenom : '',
-    age : 0,
-    adresse : {
-      rue : '',
-      codePostal :0,
-      ville : ''
+  contact: ContactI = {
+    nom: '',
+    prenom: '',
+    age: 0,
+    adresse: {
+      rue: '',
+      codePostal: 64000,
+      ville: ''
     },
-    tel : '',
-    mobile : '',
-    email : '',
-    infos : ''
+    tel: '',
+    mobile: '',
+    email: '',
+    infos: ''
   };
 
-
-  coucouToi() {
-    console.log(this.contact)
+  sendMessage() {
+    console.log(this.contact);
+    // Ici, tu peux ajouter une logique pour envoyer le message (par exemple, via un service).
   }
 }

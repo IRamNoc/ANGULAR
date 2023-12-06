@@ -7,9 +7,8 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./accueil.component.css'],
 })
 export class AccueilComponent {
-  title = 'MakerParty';
-  soustitre:string = "L'application de gestion de vos soirées";
-  moustache:string = 'Inscrit toi, soit pas timide';
-  listeMoustaches:Array<string> = ['Depeche', 'plus vite !'];
-  autreListeMoustaches:string[] = [];
+  appTitle = 'CY TECH Party Planner';
+  subTitle = "L'application de gestion de soirées étudiantes";
+  welcomeMessage = "Préparez-vous à vivre des moments inoubliables avec vos amis de CY TECH !";
+  mustaches: string[] = ['Planification facile', 'Événements mémorables', 'Convivialité garantie'];
 }

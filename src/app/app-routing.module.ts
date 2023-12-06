@@ -6,7 +6,6 @@ import { UsersComponent } from './pages/users/users.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
 import { EvenementsComponent } from './pages/evenements/evenements.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
-import { RGPDComponent } from './pages/rgpd/rgpd.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ErreurComponent } from './pages/erreur/erreur.component';
 import { EvenementComponent } from './pages/evenement/evenement.component';
@@ -20,14 +19,16 @@ const routes: Routes = [
   { path : 'evenement/:event' , component : EvenementComponent },
   { path : 'inscription' , component : InscriptionComponent },
   { path : 'connexion' , component : ConnexionComponent },
-  { path : 'mentions' , component : RGPDComponent },
-  { path : 'rgpd' , component : RGPDComponent },
   { path : 'contact' , component : ContactComponent },
   { path : 'organisation' ,
     loadChildren : () => import('./organisation/organisation.module').then(m => m.OrganisationModule),
     canActivate : [authGuard]
   },
-  { path : '**', component: ErreurComponent }
+  { path : '**', component: ErreurComponent },
+  { path : 'admin' ,
+    loadChildren : () => import('./admin/admin.module').then(m => m.AdminModule),
+    canActivate : [authGuard]
+  }
 ];
 
 @NgModule({

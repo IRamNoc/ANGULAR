@@ -7,7 +7,5 @@ import { AuthService } from 'src/app/shared/services/auth.service';
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent {
-
-  constructor(public auth : AuthService) {}
-
+  constructor(public auth: AuthService) {}
 }

@@ -1,17 +1,16 @@
-<section>
+<section class="login-section">
   <h1>Connexion</h1>
   <form (submit)="login()">
     <fieldset>
-      <label>id</label>
-      <input  [(ngModel)]="auth.authID.id" name="email">
+      <label for="email">Identifiant       </label>
+      <input [(ngModel)]="auth.authID.id" name="email" id="email" required>
     </fieldset>
 
     <fieldset>
-      <label >Mot de passe</label>
-      <input [(ngModel)]="auth.authID.mdp" type="password" name="password" >
+      <label for="password">Mot de passe       </label>
+      <input [(ngModel)]="auth.authID.mdp" type="password" name="password" id="password" required>
     </fieldset>
 
     <button type="submit">Connexion</button>
-
   </form>
 </section>

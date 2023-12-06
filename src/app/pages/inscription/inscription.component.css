@@ -1,47 +1,38 @@
+
 section {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff; /* Couleur de fond de la section */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-  }
-  
-  h1 {
-    color: #333; /* Couleur du titre */
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  fieldset {
-    margin-bottom: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input {
-    padding: 10px;
-    width: 300px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-  }
-  
-  button {
-    background-color: #007bff; /* Couleur de fond du bouton */
-    color: #fff; /* Couleur du texte dans le bouton */
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3; /* Couleur de fond au survol du bouton */
-  }
-  
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+fieldset {
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 0.9em;
+}
+
+a {
+  font-size: 0.8em; /* Taille de police réduite pour le lien */
+  margin-top: 10px; /* Espacement vers le haut */
+  color: #007bff; /* Couleur du lien (modifiable selon vos préférences) */
+  text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+a:hover {
+  text-decoration: underline; /* Soulignement lors du survol du lien */
+}

@@ -1,35 +1,35 @@
-<section>
+<section class="contact-section">
   <h1>Besoin d'infos ? Pas assez de RedBull ?</h1>
   <h2>Laissez-moi un message</h2>
-  <form (submit)="coucouToi()">
-    <label >Nom</label>
-    <input name="nom" [(ngModel)]="contact.nom" #ctlNom="ngModel" required minlength="8">
-    <span *ngIf="ctlNom.value.length < 8 ">le champ doit avoir au moins 8 carctères</span>
+  <form (submit)="sendMessage()" #contactForm="ngForm">
+    <label for="nom">Nom</label>
+    <input name="nom" [(ngModel)]="contact.nom" #ctlNom="ngModel" required minlength="3">
+    <span *ngIf="ctlNom.invalid && (ctlNom.dirty || ctlNom.touched)">
+      Le nom doit avoir au moins 3 caractères
+    </span>
 
-    <label >Prenom</label>
+    <label for="prenom">Prénom</label>
     <input name="prenom" [(ngModel)]="contact.prenom">
 
-    <label for="">Adresse (rue)</label>
+    <label for="rue">Adresse (rue)</label>
     <input name="rue" [(ngModel)]="contact.adresse.rue">
 
-    <label >Code Postal</label>
+    <label for="codePostal">Code Postal</label>
     <input name="codePostal" [(ngModel)]="contact.adresse.codePostal">
 
-    <label >Ville</label>
+    <label for="ville">Ville</label>
     <input name="ville" [(ngModel)]="contact.adresse.ville">
 
-    <label >Téléphone</label>
+    <label for="tel">Téléphone</label>
     <input name="tel" [(ngModel)]="contact.tel">
 
-    <label >Email</label>
-    <input name="email" [(ngModel)]="contact.email">
+    <label for="email">Email</label>
+    <input name="email" [(ngModel)]="contact.email" required email>
 
-    <label >Commentaire ?</label>
-    <input name="infos"  [(ngModel)]="contact.infos">
+    <label for="infos">Commentaire ?</label>
+    <textarea name="infos" [(ngModel)]="contact.infos"></textarea>
 
-
-    <button type="submit">Envoyer mon message</button>
-    <button type="reset">J'ai changer d'avis</button>
-
+    <button type="submit" [disabled]="contactForm.invalid">Envoyer mon message</button>
+    <button type="reset">J'ai changé d'avis</button>
   </form>
 </section>

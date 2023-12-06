@@ -8,13 +8,10 @@ import { UsersService } from 'src/app/shared/services/users.service';
   styleUrls: ['./connexion.component.css']
 })
 export class ConnexionComponent {
-  id : string = '';
-  mdp : string = '';
 
-  constructor ( public auth : AuthService) {}
+  constructor(public auth: AuthService) {}
 
   login() {
-    this.auth.authentification();
+    this.auth.fireAuth();
   }
-
 }

@@ -1,7 +1,15 @@
 <header>
-  <h1>{{ title }}</h1>
-  <h2>{{ soustitre }}</h2>
+  <h1>{{ appTitle }}</h1>
+  <h2>{{ subTitle }}</h2>
 </header>
-<section>
- {{ moustache }} : {{ listeMoustaches.toString() }}
+<section class="welcome-container">
+  <div class="welcome-text">
+    <p>{{ welcomeMessage }}</p>
+    <ul>
+      <li *ngFor="let mustache of mustaches">{{ mustache }}</li>
+    </ul>
+  </div>
+  <div class="welcome-image">
+    <img src="assets/studentparty.jpg" alt="Bienvenue à la fête" />
+  </div>
 </section>

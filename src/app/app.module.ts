@@ -2,14 +2,15 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
-
-//Modules
 import { SharedModule } from './shared/shared.module';
-
-//Pipes
 import { EventsPipe } from './shared/pipes/events.pipe';
-
-//Components
+import { TokenInterceptor } from './shared/securite/token.interceptor';
+import { Auth401Interceptor } from './shared/securite/auth401.interceptor';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getAuth, provideAuth } from '@angular/fire/auth';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { getDatabase, provideDatabase } from '@angular/fire/database';
+import { getStorage, provideStorage } from '@angular/fire/storage';
 import { AppComponent } from './app.component';
 import { FooterComponent } from './template/footer/footer.component';
 import { MenuComponent } from './template/menu/menu.component';
@@ -19,19 +20,9 @@ import { ProfilComponent } from './pages/profil/profil.component';
 import { EvenementsComponent } from './pages/evenements/evenements.component';
 import { InscriptionComponent } from './pages/inscription/inscription.component';
 import { ConnexionComponent } from './pages/connexion/connexion.component';
-import { RGPDComponent } from './pages/rgpd/rgpd.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ErreurComponent } from './pages/erreur/erreur.component';
 import { EvenementComponent } from './pages/evenement/evenement.component';
-
-//Interceptors
-import { TokenInterceptor } from './shared/securite/token.interceptor';
-import { Auth401Interceptor } from './shared/securite/auth401.interceptor';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { getAuth, provideAuth } from '@angular/fire/auth';
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { getDatabase, provideDatabase } from '@angular/fire/database';
-import { getStorage, provideStorage } from '@angular/fire/storage';
 
 
 @NgModule({
@@ -45,7 +36,6 @@ import { getStorage, provideStorage } from '@angular/fire/storage';
     EvenementsComponent,
     InscriptionComponent,
     ConnexionComponent,
-    RGPDComponent,
     ContactComponent,
     ErreurComponent,
     EventsPipe,

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RGPDComponent } from './rgpd.component';
+import { AddStockComponent } from './add-stock.component';
 
-describe('RGPDComponent', () => {
-  let component: RGPDComponent;
-  let fixture: ComponentFixture<RGPDComponent>;
+describe('AddStockComponent', () => {
+  let component: AddStockComponent;
+  let fixture: ComponentFixture<AddStockComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [RGPDComponent]
+      declarations: [AddStockComponent]
     });
-    fixture = TestBed.createComponent(RGPDComponent);
+    fixture = TestBed.createComponent(AddStockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

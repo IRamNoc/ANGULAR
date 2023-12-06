@@ -1,30 +1,27 @@
 <section>
   <fieldset>
-    <input type="text" [(ngModel)]="filtre"  placeholder="Filtre">
+    <input type="text" [(ngModel)]="filtre" placeholder="Filtre">
   </fieldset>
-  <table>
+  <table *ngIf="events.listeEvenements.length > 0">
     <thead>
-        <th>N°</th>
-        <th>Titre</th>
-        <th>Nb. places</th>
-        <th>Début</th>
-        <th>Fin</th>
-        <th>Date</th>
-        <th>Infos</th>
+      <th>Nom</th>
+      <th>Début de l'event</th>
+      <th>Fin de l'event</th>
+      <th>Date</th>
+      <th>Nombre de places</th>
+      <th>Plus d'infos</th>
     </thead>
     <tbody>
-      <tr *ngFor="let event of events.listeEvenements | events:filtre ; let i = index">
+      <tr *ngFor="let event of events.listeEvenements | events:filtre; let i = index">
         <td>{{ i }}</td>
-        <td><a [routerLink]="['/evenement',event.date]">{{ event.titre | uppercase }}</a></td>
+        <td><a [routerLink]="['/evenement', event.date]">{{ event.titre }}</a></td>
         <td>{{ event.places }}</td>
         <td>{{ event.horaires.debut }}</td>
         <td>{{ event.horaires.fin }}</td>
         <td>{{ event.date | date:'MMM d, y, h:mm:ss a' }}</td>
-        <td *ngIf="event.infos">{{ event.infos }}</td>
-        <td *ngIf="!event.infos"> </td>
+        <td *ngIf="event.infos; else noInfos">{{ event.infos }}</td>
+        <ng-template #noInfos><td></td></ng-template>
       </tr>
     </tbody>
   </table>
-
 </section>
-

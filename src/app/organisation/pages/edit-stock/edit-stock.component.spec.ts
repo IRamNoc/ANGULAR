@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConnexionComponent } from './connexion.component';
+import { EditStockComponent } from './edit-stock.component';
 
-describe('ConnexionComponent', () => {
-  let component: ConnexionComponent;
-  let fixture: ComponentFixture<ConnexionComponent>;
+describe('EditStockComponent', () => {
+  let component: EditStockComponent;
+  let fixture: ComponentFixture<EditStockComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ConnexionComponent]
+      declarations: [EditStockComponent]
     });
-    fixture = TestBed.createComponent(ConnexionComponent);
+    fixture = TestBed.createComponent(EditStockComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

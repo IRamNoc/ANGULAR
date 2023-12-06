@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ErreurComponent } from './erreur.component';
+import { EditEventComponent } from './edit-event.component';
 
-describe('ErreurComponent', () => {
-  let component: ErreurComponent;
-  let fixture: ComponentFixture<ErreurComponent>;
+describe('EditEventComponent', () => {
+  let component: EditEventComponent;
+  let fixture: ComponentFixture<EditEventComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ErreurComponent]
+      declarations: [EditEventComponent]
     });
-    fixture = TestBed.createComponent(ErreurComponent);
+    fixture = TestBed.createComponent(EditEventComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

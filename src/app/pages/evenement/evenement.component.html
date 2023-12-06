@@ -1,4 +1,23 @@
-<section>
-  <h2>{{ event.titre }}</h2>
-  <blockquote>{{ event.infos }}</blockquote>
+<section *ngIf="!loader">
+  <h2>Voici les infos de l'Evenement !</h2>
+  <aside>
+    <div>
+      <h2>{{ event.titre }}</h2>
+      <blockquote>{{ event.infos }}</blockquote>
+      <p>Date : {{ event.date | date:'M/d/yy' }}</p>
+      <p>Début de l'event : {{ event.horaires.debut }}</p>
+      <p>Fin de l'event : {{ event.horaires.fin }}</p>
+      <p>Nombre de places : {{ event.places }}</p>
+    </div>
+    <img [src]="event.media.src" [alt]="event.media.alt" *ngIf="event.media && event.media.src !== ''">
+  </aside>
+  <button (click)="inscription()" *ngIf="!isInscrit && auth.isLoggedIn && event.places > countInscrits">
+  Je reserve ma place
+  </button>
+  <button disabled *ngIf="isInscrit && auth.isLoggedIn">
+  Je suis déjà inscrit
+  </button>
+  <button (click)="desincrire()" *ngIf="isInscrit && auth.isLoggedIn">
+  Je me désinscris
+  </button>
 </section>
